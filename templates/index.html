@@ -12,24 +12,43 @@
 </head>
 
 <body>
+<img>
+<div style="background-image: url('https://images.unsplash.com/photo-1612490690182-1cbbc5ee55ad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80');"> >
+  <div class="row header">
+    <h1><center>HEART HEALTH MONITORING SYSTEM &nbsp;</h1></center>
+    <h3>Fill out the patient credentials to learn more!</h3>
+  </div>
  <div class="login">
-	<h1>Predict heart condetion </h1>
+	
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="44" name="age" placeholder="age" required="required" />
-        <input type="text" name="sex" placeholder="sex" required="required" />
-		<input type="text" name="cp" placeholder="cp" required="required" />
-        <input type="text" name="trestbps" placeholder="trestbps" required="required" />
-        <input type="text" name="chol" placeholder="chol" required="required" />
-		<input type="text" name="fbs" placeholder="fbs" required="required" />
-        <input type="text" name="restecg" placeholder="restecg" required="required" />
-        <input type="text" name="thalach" placeholder="thalach" required="required" />
-		<input type="text" name="exang" placeholder="exang" required="required" />
-        <input type="text" name="oldpeak" placeholder="oldpeak" required="required" />
-        <input type="text" name="slope" placeholder="slope" required="required" />
-		<input type="text" name="ca" placeholder="ca" required="required" />
-        <input type="text" name="thal" placeholder="thal" required="required" />
+	    <label for="first_name">Age</label>
+    	<input type="text" name="age" placeholder="age" required="required" /><br></br>
+		<label for="first_name">Sex</label>
+        <input type="text" name="sex" placeholder="sex" required="required" /><br></br>
+		 <label for="first_name">Chest Pain Type</label>
+		<input type="text" name="cp" placeholder="cp" required="required" /><br></br>
+		 <label for="first_name">Resting Blood Pressure</label>
+        <input type="text" name="trestbps" placeholder="trestbps" required="required" /><br></br>
+		<label for="first_name">Cholesterol</label>
+        <input type="text" name="chol" placeholder="chol" required="required" /><br></br>
+		 <label for="first_name">Fasting blood sugar</label>
+		<input type="text" name="fbs" placeholder="fbs" required="required" /><br></br>
+		 <label for="first_name">Resting electrocardiographic results </label>
+        <input type="text" name="restecg" placeholder="restecg" required="required" /><br></br>
+		<label for="first_name">Maximum heart rate achieved </label>
+        <input type="text" name="thalach" placeholder="thalach" required="required" /><br></br>
+		 <label for="first_name">Exercise induced angina</label>
+		<input type="text" name="exang" placeholder="exang" required="required" /><br></br>
+	<label for="first_name">Oldpeak(ST depression induced by exercise relative to rest)</label>
+        <input type="text" name="oldpeak" placeholder="oldpeak" required="required" /><br></br>
+		<label for="first_name">Slope of the peak exercise ST segment </label>
+        <input type="text" name="slope" placeholder="slope" required="required" /><br></br>
+		<label for="first_name">Number of major vessels colored by flourosopy </label>
+		<input type="text" name="ca" placeholder="ca" required="required" /><br></br>
+		<label for="first_name">Thal</label>
+        <input type="text" name="thal" placeholder="thal" required="required" /><br></br>
 
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
@@ -40,7 +59,3 @@
    {{ prediction_text }}
 
  </div>
-
-
-</body>
-</html>
