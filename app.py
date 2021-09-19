@@ -26,11 +26,11 @@ def predict():
 
     prediction = model.predict(input_data_reshaped)
     if (prediction[0] == 0):
-        output = "chance of not having arithmia"
+        output = "DOES NOT HAVE A HEART CONDITION"
     else:
-        output= "chance of  having arithmia"
+        output= "HAVE A HEART CCONDITION"
 
-    return render_template('index.html', prediction_text='person has 89.9% {}'.format(output))
+    return render_template('index.html', prediction_text='PERSON HAS  {}'.format(output))
 
 
 if __name__ == "__main__":
